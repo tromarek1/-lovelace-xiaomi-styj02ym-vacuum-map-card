@@ -539,7 +539,7 @@ class XiaomiVacuumMapCard extends LitElement {
             alert(JSON.stringify([mapPos.x, mapPos.y]));
         } else {
             this._hass.callService("vacuum", "xiaomi_clean_point", {
-                entity_id: "vacuum.bambo",
+                entity_id: this._config.entity,
                 point: [mapPos.x, mapPos.y]
             }).then(() => this.showToast());
         }
@@ -567,7 +567,7 @@ class XiaomiVacuumMapCard extends LitElement {
             const selectedZone = this.selectedZones[i];
             const preselectedZone = this._config.zones[selectedZone];
             for (const rect of preselectedZone) {
-                zone.push([rect[0], rect[1], rect[2], rect[3], this.vacuumZonedCleanupRepeats])
+                zone.push([rect[0], rect[1], rect[2], rect[3])
             }
         }
         if (debug && this._config.debug) {
