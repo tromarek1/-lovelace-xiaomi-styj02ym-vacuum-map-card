@@ -575,7 +575,7 @@ class XiaomiVacuumMapCard extends LitElement {
         } else {
             this._hass.callService(this.service_domain, "xiaomi_clean_zone", {
                 entity_id: this._config.entity,
-                params: zone,
+                zone: zone,
 		repeats: this.vacuumZonedCleanupRepeats
             }).then(() => this.showToast());
         }
