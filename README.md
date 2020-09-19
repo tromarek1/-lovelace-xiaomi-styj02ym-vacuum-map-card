@@ -1,0 +1,1 @@
+# -lovelace-xiaomi-styj02ym-vacuum-map-card
