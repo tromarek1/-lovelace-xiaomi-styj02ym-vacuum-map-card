@@ -567,7 +567,7 @@ class XiaomiVacuumMapCard extends LitElement {
             const selectedZone = this.selectedZones[i];
             const preselectedZone = this._config.zones[selectedZone];
             for (const rect of preselectedZone) {
-                zone.push([rect[0], rect[1], rect[2], rect[3])
+                zone.push([rect[0], rect[1], rect[2], rect[3]])
             }
         }
         if (debug && this._config.debug) {
